@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #555;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #222;
+}
+.clip{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.clip1{ 
+    background-image: url("https://media.istockphoto.com/id/479124056/photo/woman-driving-yacht.jpg?s=612x612&w=0&k=20&c=9-G70QF5zmMtlXx7RNF3lNlVCo9EgADQS6bgCLtT3KE=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(0% 0%, 46% 0%, 39% 100%, 0 100%);
+}
+.clip2{ 
+    background-image: url("https://img.freepik.com/premium-photo/blond-lady-riding-boat-lovely-mountain-river-generative-ai_722401-21181.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon(19% 0, 87% 0, 64% 100%, 33% 100%);
+}
+.clip3{ 
+    background-image: url("https://images.smiletemplates.com/uploads/screenshots/202/0000202912/powerpoint-template-450w.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: polygon( 82% 0, 100% 0, 100% 100%, 63% 100%);
+}
+.container:hover .clip {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100% )
+}
+
+.container .clip:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+}
