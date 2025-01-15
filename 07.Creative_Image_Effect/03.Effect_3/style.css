@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card{
+    width: 30rem;
+    height: 30rem;
+    overflow: hidden;
+    position: relative;
+}
+ img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content{
+ position: absolute;
+ width: 80%;
+ height: 10px;
+ bottom: 0;
+ left: 10%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ overflow: hidden;
+ transition: all 1s;
+ background: rgb(220, 20, 60);
+}
+.card:hover .content{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: rgba(220, 20, 60, 0.5);
+}

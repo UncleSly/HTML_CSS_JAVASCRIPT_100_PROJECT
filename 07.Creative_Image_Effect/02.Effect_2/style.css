@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 30rem;
+    height: 30rem;
+    overflow: hidden;
+    position: relative;
+}
+.container img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+    margin: 0
+}
+.container article{
+    position: absolute;
+    bottom: -110px;
+    left: 0;
+    width: 100%;
+    background: black;
+    color: green;
+    text-align: center;
+    transition: all 1s;
+    z-index: 1;
+}
+.container:hover article{
+    bottom: 0;
+}
+.container:hover img{
+    top: -110px;
+}
+
