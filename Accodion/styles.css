@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:antiquewhite;
+}
+
+.container{
+    width: 60%;
+    height: fit-content;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 2px rgba(64, 60, 60, 0.5);
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.accordion h2{
+    font-size: 18px;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 1.5px solid gray;
+    font-weight: 100;
+}
+
+.accordion h2::after {
+    content: "+";
+    position: absolute;
+    right: -5px;
+}
+
+.accordion p{
+    margin-top: 20px;
+    line-height: 1.5;
+    width: 100%;
+    font-size: 20px;
+    height: 0;
+    overflow: hidden;
+    transition: 500ms;
+}
+
+.accordion.active p{
+     height: 150px;
+}
+
+.accordion.active h2::after{
+    content: "-";
+    font-size: 20px;
+    transition: .5s;
+}
+.accordion.active h2{
+    font-size: 16px;
+    transition: .5s;
+}
