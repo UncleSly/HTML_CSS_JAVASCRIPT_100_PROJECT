@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    background: red;
+}
+.accordion{
+    width: 50%;
+    height: fit-content;
+    list-style: none;
+}
+.accordion li{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+.accordion li label{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+    padding: 10px 3%;
+    font-size: 22px;
+}
+.accordion li .content{
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+.accordion li .content p{
+    line-height: 1.3;
+    padding: 20px 10px;
+}
+.accordion li label span{
+    transform: rotate(90deg);
+}
+.accordion label + input[type="radio"]{
+    display: none;
+}
+.accordion input[type="radio"]:checked + .content{
+    height: 100px;
+}
