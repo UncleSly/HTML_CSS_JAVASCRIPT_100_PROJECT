@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+nav{
+    padding: 20px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgb(122, 121, 121);
+    transition: width 0.6s linear
+}
+
+nav.navBar{
+    width: 350px
+}
+ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    transition: width 0.6s linear;
+}
+
+nav.navBar ul{
+    width: 100%;
+}
+
+nav ul li{
+    transform: rotate(0deg);
+    opacity: 0;
+    transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+nav.navBar ul li{
+    opacity: 1;
+    transform: rotateY(360deg)
+}
+
+nav ul a {
+    position: relative;
+    text-decoration: none;
+    margin: 0 10px;
+    color: #000;
+}
+
+.icon{
+    border: 0;
+    padding: 0;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    outline: none;
+    cursor: pointer;
+    background: #fff;
+}
+.icon .line {
+    background: red;
+    height: 2px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: transform 0.6s linear;
+}
+.icon .line2 {
+    top: auto;
+    bottom: 10px;
+}
+
+nav.navBar .icon .line1 {
+    transform: rotate(-765deg) translateY(5.5px);
+}
+nav.navBar .icon .line2 {
+    transform: rotate(765deg) translateY(-5.5px);
+}
