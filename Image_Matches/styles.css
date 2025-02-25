@@ -1,0 +1,11 @@
+#container{
+    width: 600px;
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid rgb(236, 209, 209);
+}
+#container img{
+    width:150px;
+    height: 150px;
+}

@@ -1,0 +1,15 @@
+.container{
+    width: 605px;
+    height: 605px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black
+}
+
+.mole{
+    background: red;
+}
