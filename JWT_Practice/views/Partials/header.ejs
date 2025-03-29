@@ -1,0 +1,11 @@
+<header class="header">
+     <h1>Logo</h1>
+        <ul class="btn">
+            <% if (user) { %>
+                <li><a href="/logout">Logout</a></li>
+            <% }else { %>
+            <li><a href="/signup">Sign Up</a></li>
+            <li><a href="/login">Login</a></li>
+            <% } %>
+        </ul>
+</header>

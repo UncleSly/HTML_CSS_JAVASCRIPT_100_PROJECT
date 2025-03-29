@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="styles.css">
+
+<div class="formContainer">
+    <form>
+        <h1>Login</h1>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email", id="email" required>
+            <div class="email error"></div>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password", id="password" required>
+            <div class="password error"></div>
+        </div>
+        <button>Login</button>
+        <a href="/signup">Register</a>
+    </form>
+</div>
+
+<script>
+    const form = document.querySelector('form')
+    const emailError = document.querySelector('.email')
+    const passwordError = document.querySelector(".password")
+
+    form.addEventListener('submit', async(e) =>{
+          e.preventDefault()
+          const email = form.email.value;
+          const password = form.password.value;
+
+          //clearing the error
+          emailError.textContent = ""
+          passwordError.textContent = ""
+
+          try {
+              const res = await fetch("/login", {
+                method: "POST",
+                body: JSON.stringify({email, password}),
+                headers: {"Content-Type": "application/json"} 
+              })
+                    const data =  await res.json()
+                    if(data.errors){
+                       emailError.textContent = data.errors.email
+                       passwordError.textContent = data.errors.password
+                    }
+                    if(data.user){
+                        location.assign("/secondpage")
+                    }
+              
+          } catch (error) {
+              console.log(error)
+          }
+    })
+</script>
